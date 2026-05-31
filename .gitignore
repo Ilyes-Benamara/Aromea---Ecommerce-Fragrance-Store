@@ -1,0 +1,4 @@
+.env
+config.php
+images/uploads/
+node_modules/
