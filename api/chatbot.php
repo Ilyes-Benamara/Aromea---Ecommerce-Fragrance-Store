@@ -157,9 +157,9 @@ PROMPT;
 // You can change the model to any OpenRouter model you like.
 
 $payload = json_encode([
-    'model' => 'google/gemini-2.0-flash-001',   // change this if you prefer another model
+    'model' => 'google/gemini-2.5-flash',
     'max_tokens'  => 800,
-    'temperature' => 0.3,                         // low = more consistent/logical picks
+    'temperature' => 0.3,
     'messages'    => [
         [
             'role'    => 'user',
@@ -195,7 +195,11 @@ if ($curlError) {
 
 if ($httpStatus !== 200) {
     http_response_code(500);
-    echo json_encode(['error' => 'OpenRouter error', 'details' => $response]);
+    echo json_encode([
+    'error' => 'OpenRouter error',
+    'status' => $httpStatus,
+    'details' => json_decode($response, true)
+]);
     exit;
 }
 
