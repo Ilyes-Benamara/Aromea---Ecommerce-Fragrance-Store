@@ -16,7 +16,6 @@ include 'header.php';
     <div class="about-hero-line"></div>
   </section>
 
-  <!-- ── MANIFESTO ── -->
   <section class="about-manifesto">
     <div class="about-manifesto-inner">
       <p class="about-manifesto-text">
@@ -25,7 +24,6 @@ include 'header.php';
     </div>
   </section>
 
-  <!-- ── THREE PILLARS ── -->
   <section class="about-pillars">
     <div class="about-pillar">
       <div class="about-pillar-num">01</div>
@@ -46,10 +44,8 @@ include 'header.php';
     </div>
   </section>
 
-  <!-- ── DIVIDER ── -->
   <div class="about-full-divider"></div>
 
-  <!-- ── CATEGORIES ── -->
   <section class="about-categories">
     <h2 class="about-section-label">What We Carry</h2>
     <div class="about-cat-grid">
@@ -61,7 +57,7 @@ include 'header.php';
       <div class="about-cat-card">
         <span class="about-cat-icon"><i class="fa-solid fa-flask"></i></span>
         <h3>Niche</h3>
-        <p>Xerjoff, Maison Margiela, Louis Vuitton — avant-garde perfumery for the discerning nose.</p>
+        <p>Xerjoff, Maison Margiela, EX Nihilo — avant-garde perfumery for the discerning nose.</p>
       </div>
       <div class="about-cat-card">
         <span class="about-cat-icon"><i class="fa-solid fa-moon"></i></span>

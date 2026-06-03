@@ -1,6 +1,3 @@
-// aromea.js — front-end behaviour: cart, modals, filters, chat.
-// Fragrances are injected from PHP via fragrance-data.php as window.DB_FRAGRANCES.
-
 const FRAGRANCES = (window.DB_FRAGRANCES && window.DB_FRAGRANCES.length) ? window.DB_FRAGRANCES : [];
 
 // ── CART ─────────────────────────────────────────────────────

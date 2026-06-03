@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $age       = intval($_POST['age']          ?? 0);
     $gender    = sanitize($_POST['gender']     ?? '');
 
-    /* Generate a unique username from firstname + lastname + random suffix */
+    /* Generating a unique username from firstname + lastname + random suffix */
     $base_username = strtolower(preg_replace('/[^a-zA-Z0-9]/', '', $firstname . $lastname));
     if (empty($base_username)) $base_username = 'user';
     $username = $base_username . rand(100, 9999);

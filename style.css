@@ -357,11 +357,11 @@ footer .logo {
   transition: all 0.2s ease;
 }
 #search-button {
-  background: #024bf3;
+  background: var(--green);
   color: #fff;
 }
 #search-button:hover {
-  background: #5985ff;
+  background: var(--green-hover);
   transform: translateY(-1px);
 }
 #filter-button {
@@ -2670,10 +2670,7 @@ footer .logo {
   }
 }
 
-/* ============================================================
-   ADMIN DASHBOARD STYLES
-   Minimal, on-brand, matching Aromea's aesthetic
-   ============================================================ */
+/* ADMIN DASHBOARD */
 
 /* ── ADMIN LAYOUT ───────────────────────────────────────────── */
 .admin-wrapper {
@@ -3597,8 +3594,6 @@ footer .logo {
   }
 }
 
-/* Skew-fill hover effect for primary CTA buttons.
-   Site colors are preserved; an overlay slides across on hover. */
 .hero-buttons button,
 .collection-card button,
 .explore-card button,

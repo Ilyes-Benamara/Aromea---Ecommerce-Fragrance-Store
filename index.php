@@ -72,8 +72,8 @@ if ($res2 && $res2->num_rows > 0) {
         <h2>Popular Collections</h2>
         <?php if (empty($home_collections)): ?>
             <p style="text-align:center;color:var(--text-muted);padding:2rem 1rem;font-family:Montserrat;font-size:0.88rem;">
-                No collections featured yet. Enable them in the
-                <a href="<?php echo BASE_URL; ?>/admin/collections.php" style="color:var(--text-main);font-weight:700;">admin panel</a>.
+                No collections featured yet. Still work to do by the
+                <a href="<?php echo BASE_URL; ?>/admin/collections.php" style="color:var(--text-main);font-weight:700;">admin</a>.
             </p>
         <?php else: ?>
         <div class="collection-container">

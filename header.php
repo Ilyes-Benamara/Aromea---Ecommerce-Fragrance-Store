@@ -1,7 +1,4 @@
 <?php
-// header.php - Shared Header Component
-// Works for both root pages and admin/ subdirectory pages
-
 if (!isset($conn)) {
     $cfg = __DIR__ . '/config.php';
     if (!file_exists($cfg)) $cfg = __DIR__ . '/../config.php';

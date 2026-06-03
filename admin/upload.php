@@ -1,10 +1,4 @@
 <?php
-/**
- * upload.php — Aromea Admin Image Upload Handler
- * Accepts a multipart POST with file field "image".
- * Returns JSON: { "success": true, "url": "images/uploads/xxx.jpg" }
- *              or { "success": false, "error": "..." }
- */
 require_once __DIR__ . '/../config.php';
 header('Content-Type: application/json');
 
@@ -35,7 +29,6 @@ if ($error !== UPLOAD_ERR_OK) {
     exit;
 }
 
-// Validate MIME type via finfo (not trusting $_FILES['type'])
 $finfo    = new finfo(FILEINFO_MIME_TYPE);
 $mime     = $finfo->file($file['tmp_name']);
 $allowed  = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp', 'image/gif' => 'gif', 'image/avif' => 'avif'];
@@ -51,13 +44,13 @@ if ($file['size'] > 10 * 1024 * 1024) {
     exit;
 }
 
-// Ensure upload directory exists
+// Verifying upload exists locally
 $upload_dir = __DIR__ . '/../images/uploads/';
 if (!is_dir($upload_dir)) {
     mkdir($upload_dir, 0755, true);
 }
 
-// Build a unique, sanitized filename
+// Build a unique filename
 $ext      = $allowed[$mime];
 $basename = pathinfo($file['name'], PATHINFO_FILENAME);
 $basename = preg_replace('/[^a-zA-Z0-9_\-]/', '_', $basename);
@@ -70,7 +63,7 @@ if (!move_uploaded_file($file['tmp_name'], $dest)) {
     exit;
 }
 
-// Return a path relative to the site root (BASE_URL is something like /aromea)
+// Return a path relative to the site root
 $relative = 'images/uploads/' . $filename;
 echo json_encode(['success' => true, 'url' => $relative]);
 exit;
